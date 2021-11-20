@@ -10,6 +10,7 @@ const resultBlock = document.querySelector('.result-block');
 
 function detectItem () {
   const resultItem = document.querySelector('.result-item');
+  console.log(resultItem)
 
  const resultItemListener = resultItem.addEventListener('click', (e) => {
     search.value = e.target.innerText;
@@ -38,6 +39,7 @@ search.addEventListener('input', debounce((e) => {
     "modelName": "Address",
     "calledMethod": "searchSettlements",
     "methodProperties": {
+        Language: 'ru',
         "CityName": e.target.value,
         "Limit": 5
     }
